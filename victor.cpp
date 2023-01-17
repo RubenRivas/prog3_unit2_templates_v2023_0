@@ -20,7 +20,7 @@ victor::victor(const victor &other):
 victor::victor(victor &&other):
     sz_(other.sz_),                 // Copio el tamaño (sz_)
     data_(other.data_) {            // Mover el contenido
-    // Deshabilitacion de other
+    // Deshabilitación de other
     other.sz_ = 0;
     other.data_ = nullptr;
 }
@@ -42,7 +42,7 @@ victor &victor::operator=(victor &&other) {
     delete [] data_;
     sz_ = other.sz_;
     data_ = other.data_;  // Copia la referencia en el nuevo victor
-    // Deshabilitacion de other
+    // Deshabilitación de other
     other.sz_ = 0;
     other.data_ = nullptr;
     return *this;
